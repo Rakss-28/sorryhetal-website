@@ -4,23 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sorry 🥹 </title>
-  <title>Beautiful and Cute Phase Transition</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
-@@ -27,14 +27,14 @@
       text-align: center;
       background: rgba(255, 105, 180, 0.8);
       color: white;
-      padding: 20px; /* Reduced padding for mobile */
       padding: 20px;
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       animation: fadeIn 0.5s ease-out;
-      width: 90%; /* Use percentage for width */
-      max-width: 600px; /* Limit max width */
-      position: relative; /* Changed to relative */
-      margin: 0 auto; /* Center align */
       width: 90%;
       max-width: 600px;
       position: relative;
@@ -28,37 +21,56 @@
     }
 
     @keyframes fadeIn {
-@@ -47,7 +47,7 @@
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
 
     .intro-page h1 {
-      font-family: 'Times New Roman', serif; /* Serif font */
       font-family: 'Times New Roman', serif;
       font-size: 3rem;
       margin-bottom: 20px;
       font-weight: bold;
-@@ -68,7 +68,7 @@
+    }
+
+    .intro-page p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      padding: 0 10px;
+    }
+
+    .intro-page button {
+      background-color: #FF5C8D;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      color: white;
       cursor: pointer;
       margin-top: 20px;
       text-transform: uppercase;
-      width: 100%; /* Full width buttons */
       width: 100%;
+      transition: all 0.3s ease;
     }
 
-    .look-at-us-button:hover, .next-button:hover, .back-button:hover {
-@@ -78,17 +78,38 @@
+    .intro-page button:hover {
+      background-color: #ff396d;
+    }
+
     .phase {
       background-color: rgba(255, 255, 255, 0.9);
       color: #555;
-      margin: 10px 0; /* Adjust margin for mobile */
       margin: 10px 0;
+      padding: 20px;
+      border-radius: 10px;
+      display: none;
     }
 
-    /* Enhanced Phase Headings */
     .phase h2 {
-      font-size: 2rem; /* Adjusted font size for mobile */
-      font-family: 'Dancing Script', cursive;
       font-size: 2.5rem;
+      font-family: 'Dancing Script', cursive;
       color: #FF5C8D;
       text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
       margin-bottom: 15px;
@@ -66,14 +78,11 @@
     }
 
     .phase p {
-      font-size: 1rem; /* Adjusted font size for mobile */
-      line-height: 1.5; /* Adjusted line height for readability */
-      padding: 0 10px; /* Add padding for better text appearance */
       font-size: 1rem;
       line-height: 1.5;
       padding: 0 10px;
     }
-    /* Add Bounce Animation */
+
     @keyframes bounceIn {
       0% {
         transform: scale(0.5);
@@ -88,8 +97,30 @@
       }
     }
 
+    .phase button {
+      background-color: #FF5C8D;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+      text-transform: uppercase;
+      width: 100%;
+    }
+
+    .phase button:hover {
+      background-color: #ff396d;
+    }
+
     @media (max-width: 768px) {
-@@ -104,92 +125,90 @@
+      .intro-page h1 {
+        font-size: 2rem;
+      }
+      .intro-page p {
+        font-size: 1rem;
+      }
+      .intro-page button {
         padding: 12px 25px;
         font-size: 1.1rem;
       }
@@ -104,10 +135,11 @@
   <div class="intro-page" id="introPage">
     <h1>SORRY HETAL</h1>
     <p class="intro-text">
-      Tum mere liye bahut important person ho, main kabhi bhi tujhe chodna nahi chahta. I know I've really messed up, and I am the reason for it. I hate to bring these fights between us; sometimes, I don't realize the impact of my actions until it gets worse. Aur jab bhi main tumhe hurt karta hoon, mujhe lagta hai jaise main apne dil ka ek part hurt kar raha hoon 💔. You mean so much to me, and I never wanted our friendship to be like this. Mujhe woh din ab bhi yaad hai jab hum bina kisi fights ke khush rehte the, aur tum mere saath bilkul comfortable thi ✨. Tumse baat karte waqt sab kuch aasaan lagta hai, aur ab jab humare beech yeh faasla hai jo mere wajah se hua hai, mujhe sach mein bura lagta hai. Teri jaisi dost milna mushkil hai, aur jaise tujhe bulna nahi hota mere se, waise main tumhe kabhi chhodna nahi chahta 🫠
+      Tum mere liye bahut important person ho, main kabhi bhi tujhe chodna nahi chahta. I know I've really messed up, and I am the reason for it. I hate to bring these fights between us; sometimes, I don't realize the impact of my actions until it gets worse. Aur jab bhi main tumhe hurt karta hoon, mujhe lagta hai jaise main apne dil ka ek part hurt kar raha ho on 💔. You mean so much to me, and I never wanted our friendship to be like this. Mujhe woh din ab bhi yaad hai jab hum bina kisi fights ke khush rehte the, aur tum mere saath bilkul comfortable thi ✨. Tumse baat karte waqt sab kuch aasaan lagta hai, aur ab jab humare beech yeh faasla hai jo mere wajah se hua hai, mujhe sach mein bura lagta hai. Teri jaisi dost milna mushkil hai, aur jaise tujhe bulna nahi hota mere se, waise main tumhe kabhi chhodna nahi chahta 🫠
     </p>
     <button class="look-at-us-button" onclick="goToPhases()">Look At Us</button>
   </div>
+
   <!-- Phase 1: Contact/Acquaintance -->
   <div class="phase" id="phase1">
     <h2 class="phase-title">REGRET</h2>
@@ -117,6 +149,7 @@
     <button class="next-button" onclick="goToPhase2()">Next</button>
     <button class="back-button" onclick="goBack()">Back to Home</button>
   </div>
+
   <!-- Phase 2: Involvement -->
   <div class="phase" id="phase2">
     <h2 class="phase-title">Nostalgia and Cherish 💖</h2>
@@ -126,119 +159,54 @@
     <button class="next-button" onclick="goToPhase3()">Next</button>
     <button class="back-button" onclick="goBack()">Back to Home</button>
   </div>
+
   <!-- Phase 3: Promise -->
   <div class="phase" id="phase3">
     <h2 class="phase-title">Promise</h2>
     <p>
-     Main tumhe yeh wada karta hoon, Hetal—humari dosti ko main sabse zyada value karta hoon. Main hamesha tumhare saath rahunga, tumhare liye har waqt yahan hoon, aur apni taraf se sab kuch karunga taaki hum dono apni dosti ko ache tareeke se samajh sakein. Main itna mehnat karunga ke hum dono ko aise fights na face karne padein, main tumhe yeh promise karta hoon. Hamara bond waise hi strong ho jayega jaise pehle tha, main woh sab kuch karunga jo zaroori ho. Tera bina main aisa situation mein imagine bhi nahi kar paa raha hoon 🥹. Main tumhara saath kabhi nahi chhodunga, yeh mera promise hai. Tumhare emotions ko samajhna bhi zaroori hai, aur main wo sab kuch karunga jisse tumhein sukoon mile. Main really sorry hoon, agar kuch bhi galat laga ho toh, aur yeh padhte waqt agar kuch weird lage toh. Tumhare saath rahe kar life ka sabse best phase enjoy karenge! 💖
+      Main tumhe yeh wada karta hoon, Hetal—humari dosti ko main sabse zyada value karta hoon. Main hamesha tumhare saath rahunga, tumhare liye har waqt yahan hoon, aur apni taraf se sab kuch karunga taaki tumhe kabhi bhi hurt na ho. Tumhari jo bhi dukh aur gham hai, main unko apna samajh ke tumhara saath dunga. Tumhe har pal khush dekhna meri dua hai, aur main uske liye mehnat karoonga. Ek baar mauka doge? Umr bhar yahaan rakkar khyaal rakhunga 💪. Mera dil keh raha hai ke sab kuch theek ho jaayega, bas hum thoda patience rakhein.
     </p>
     <button class="next-button" onclick="goToConclusion()">Next</button>
     <button class="back-button" onclick="goBack()">Back to Home</button>
   </div>
+
   <!-- Conclusion Phase -->
-  <div class="phase" id="conclusionPhase">
+  <div class="phase" id="conclusion" style="display: none;">
     <h2 class="phase-title">Conclusion</h2>
     <p>
-      Teri jaisi dost milna mushkil hai, aur main nahi chahta hoon ki tu mujhe chhod de yaar. Please, tu ek heera jaise ho 💎, samajh gaya main aur tujhe waisa hi care karunga ❤, chahe kuch bhi ho jaye. Main tujhe kabhi bhi dhokha nahi dunga, Hetal, ye mera waada hai 🤞. Na main tujhe hurt karunga, promise 🙏. Actually, aisa apology bolna bahut naya laga mujhe 😅, maybe tujhe bhi. Yaad dila raha hoon ki main UIWD, JS, HTML mein topper hoon 😎. Tere liye phir se ye course revisit karna padta 😂. And again, Hetal, I'm so sorry 😔. Can we be the same as before so that it will help us heal 💖 and bring back the peace and comfort we had before. Meri taraf se ek request hai, ye puchne ke liye sharam aa rahi hai mujhe, lekin maine woh cheez teri case mein chhod diya, woh alag baat hai 😅. Mein puchna chahta hoon ki tu meri birthday pe aajaa na, please. Ye mera first birthday hai tumlog ke saath, naye friends se important ban gayi hai. I know, you can't come, lekin kuch bhi kar lekin mujhe disappoint mat karna. Sorry agar ye puchne mein galti hai toh. Tere message ka wait kar raha hoon, baap itne din block kar diya 😭. Waisa lag raha hai ki mera dil ka ek part se blood flow ruk gaya hai 😭
+      Hetal, main chahta hoon ke humare beech jo bhi misunderstandings hain, unhe hum door kar sakein. Tum meri zindagi ka ek important hissa ho, aur main tumhe khush dekhna chahta hoon. Main yeh wada karta hoon ke main apne actions se tumhe yeh dikhane ki koshish karunga ke main kitna serious hoon. Tumhare saath jo bhi moments humne share kiye hain, unhe main kabhi nahi bhoolunga. Aakhir mein, main sirf yeh kehna chahta hoon—let's start fresh and make new memories together. Tumhare bina sab kuch adhoora hai. 
     </p>
     <button class="back-button" onclick="goBack()">Back to Home</button>
   </div>
+
   <script>
-    window.onload = function() {
-      setTimeout(function() {
-        document.getElementById("introPage").style.display = "flex";
-      }, 2000); // Show the intro after 2 seconds delay
-    };
+    // Function to navigate to phases
     function goToPhases() {
-      document.getElementById("introPage").style.display = "none";
-      document.getElementById("phase1").style.display = "block";
+      document.getElementById('introPage').style.display = 'none';
+      document.getElementById('phase1').style.display = 'block';
     }
 
     function goToPhase2() {
-      document.getElementById("phase1").style.display = "none";
-      document.getElementById("phase2").style.display = "block";
+      document.getElementById('phase1').style.display = 'none';
+      document.getElementById('phase2').style.display = 'block';
     }
-<!-- Intro Page -->
-<div class="intro-page" id="introPage">
-  <h1>Welcome to the Beautiful Journey</h1>
-  <p class="intro-text">Join me as we go through the most memorable phases of this friendship and life journey!</p>
-  <button class="look-at-us-button" onclick="startJourney()">Start the Journey</button>
-</div>
-<!-- Phase 1 -->
-<div class="phase" id="phase1">
-  <h2 class="phase-title">REGRET 💔</h2>
-  <p>
-    I deeply regret how we've ended up here, Hetal. I never imagined we'd be in this kind of situation, and it hurts me more than words can express...
-  </p>
-  <button class="next-button" onclick="goToPhase2()">Next</button>
-  <button class="back-button" onclick="goBack()">Back to Home</button>
-</div>
-<!-- Phase 2 -->
-<div class="phase" id="phase2">
-  <h2 class="phase-title">Nostalgia and Cherish 💖</h2>
-  <p>
-    I really miss those days when you were comfortable and at peace with me. I loved playing with your hair and forehead with my fingers, and you giving me that 😏 expression...
-  </p>
-  <button class="next-button" onclick="goToPhase3()">Next</button>
-  <button class="back-button" onclick="goBack()">Back to Home</button>
-</div>
-<!-- Phase 3 -->
-<div class="phase" id="phase3">
-  <h2 class="phase-title">Promise 🫂</h2>
-  <p>
-    Main tumhe yeh wada karta hoon, Hetal—humari dosti ko main sabse zyada value karta hoon. Main hamesha tumhare saath rahunga, tumhare liye har waqt yahan hoon...
-  </p>
-  <button class="next-button" onclick="goToConclusion()">Next</button>
-  <button class="back-button" onclick="goBack()">Back to Home</button>
-</div>
-<!-- Conclusion -->
-<div class="phase" id="conclusionPhase">
-  <h2 class="phase-title">Conclusion 💎</h2>
-  <p>
-    Teri jaisi dost milna mushkil hai, aur main nahi chahta hoon ki tu mujhe chhod de yaar. Please, tu ek heera jaise ho 💎, samajh gaya main aur tujhe waisa hi care karunga ❤...
-  </p>
-  <button class="back-button" onclick="goBack()">Back to Home</button>
-</div>
-<script>
-  function startJourney() {
-    document.getElementById('introPage').style.display = 'none';
-    document.getElementById('phase1').style.display = 'flex';
-  }
-  function goToPhase2() {
-    document.getElementById('phase1').style.display = 'none';
-    document.getElementById('phase2').style.display = 'flex';
-  }
-  function goToPhase3() {
-    document.getElementById('phase2').style.display = 'none';
-    document.getElementById('phase3').style.display = 'flex';
-  }
-  function goToConclusion() {
-    document.getElementById('phase3').style.display = 'none';
-    document.getElementById('conclusionPhase').style.display = 'flex';
-  }
-  function goBack() {
-    document.getElementById('phase1').style.display = 'none';
-    document.getElementById('phase2').style.display = 'none';
-    document.getElementById('phase3').style.display = 'none';
-    document.getElementById('conclusionPhase').style.display = 'none';
-    document.getElementById('introPage').style.display = 'flex';
-  }
-</script>
 
     function goToPhase3() {
-      document.getElementById("phase2").style.display = "none";
-      document.getElementById("phase3").style.display = "block";
+      document.getElementById('phase2').style.display = 'none';
+      document.getElementById('phase3').style.display = 'block';
     }
+
     function goToConclusion() {
-      document.getElementById("phase3").style.display = "none";
-      document.getElementById("conclusionPhase").style.display = "block";
+      document.getElementById('phase3').style.display = 'none';
+      document.getElementById('conclusion').style.display = 'block';
     }
+
     function goBack() {
-      document.getElementById("phase1").style.display = "none";
-      document.getElementById("phase2").style.display = "none";
-      document.getElementById("phase3").style.display = "none";
-      document.getElementById("conclusionPhase").style.display = "none";
-      document.getElementById("introPage").style.display = "block";
+      document.getElementById('phase1').style.display = 'none';
+      document.getElementById('phase2').style.display = 'none';
+      document.getElementById('phase3').style.display = 'none';
+      document.getElementById('conclusion').style.display = 'none';
+      document.getElementById('introPage').style.display = 'block';
     }
   </script>
 </body>
