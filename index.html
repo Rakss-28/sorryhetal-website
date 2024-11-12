@@ -16,9 +16,10 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      overflow: hidden; /* Prevent overflow */
     }
 
-    .intro-page {
+    .intro-page, .phase {
       display: none;
       justify-content: center;
       align-items: center;
@@ -26,17 +27,14 @@
       text-align: center;
       background: rgba(255, 105, 180, 0.8);
       color: white;
-      padding: 30px;
+      padding: 20px; /* Reduced padding for mobile */
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      animation: fadeIn 0.5s ease-out; /* Adjusted to 0.5s */
-      width: 100%;
-      height: 100%;
-      max-width: none;
-      max-height: none;
-      position: absolute;
-      top: 0;
-      left: 0;
+      animation: fadeIn 0.5s ease-out;
+      width: 90%; /* Use percentage for width */
+      max-width: 600px; /* Limit max width */
+      position: relative; /* Changed to relative */
+      margin: 0 auto; /* Center align */
     }
 
     @keyframes fadeIn {
@@ -62,55 +60,7 @@
       font-style: italic;
     }
 
-    .look-at-us-button {
-      background-color: #FF5C8D;
-      color: white;
-      font-size: 1.3rem;
-      padding: 14px 35px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-      transition: 0.3s;
-      text-transform: uppercase;
-    }
-
-    .look-at-us-button:hover {
-      background-color: #FF4070;
-      transform: scale(1.05);
-    }
-
-    .phase {
-      display: none;
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 20px;
-      margin: 10px;
-      border-radius: 15px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      max-width: 800px;
-      margin: 20px auto;
-      text-align: center;
-      transition: transform 0.2s;
-      margin-top: 50px;
-    }
-
-    .phase:hover {
-      transform: scale(1.02);
-    }
-
-    .phase h2 {
-      font-size: 2.5rem;
-      color: #FF69B4;
-      margin-bottom: 20px;
-    }
-
-    .phase p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .next-button, .back-button {
+    .look-at-us-button, .next-button, .back-button {
       background-color: #FF5C8D;
       color: white;
       padding: 10px 20px;
@@ -118,10 +68,27 @@
       cursor: pointer;
       margin-top: 20px;
       text-transform: uppercase;
+      width: 100%; /* Full width buttons */
     }
 
-    .next-button:hover, .back-button:hover {
+    .look-at-us-button:hover, .next-button:hover, .back-button:hover {
       background-color: #FF4070;
+    }
+
+    .phase {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #555;
+      margin: 10px 0; /* Adjust margin for mobile */
+    }
+
+    .phase h2 {
+      font-size: 2rem; /* Adjusted font size for mobile */
+    }
+
+    .phase p {
+      font-size: 1rem; /* Adjusted font size for mobile */
+      line-height: 1.5; /* Adjusted line height for readability */
+      padding: 0 10px; /* Add padding for better text appearance */
     }
 
     @media (max-width: 768px) {
@@ -129,11 +96,11 @@
         font-size: 2rem;
       }
 
-      .intro-text {
+      .intro-text, .phase p {
         font-size: 1rem;
       }
 
-      .look-at-us-button {
+      .look-at-us-button, .next-button, .back-button {
         padding: 12px 25px;
         font-size: 1.1rem;
       }
@@ -147,9 +114,6 @@
     <p class="intro-text">
       Tum mere liye bahut important person ho, main kabhi bhi tujhe chodna nahi chahta. I know I've really messed up, and I am the reason for it. I hate to bring these fights between us; sometimes, I don't realize the impact of my actions until it gets worse. Aur jab bhi main tumhe hurt karta hoon, mujhe lagta hai jaise main apne dil ka ek part hurt kar raha hoon 💔. You mean so much to me, and I never wanted our friendship to be like this. Mujhe woh din ab bhi yaad hai jab hum bina kisi fights ke khush rehte the, aur tum mere saath bilkul comfortable thi ✨. Tumse baat karte waqt sab kuch aasaan lagta hai, aur ab jab humare beech yeh faasla hai jo mere wajah se hua hai, mujhe sach mein bura lagta hai. Teri jaisi dost milna mushkil hai, aur jaise tujhe bulna nahi hota mere se, waise main tumhe kabhi chhodna nahi chahta 🫠
     </p>
-    <p class="intro-text">
-      Tumse baat karte waqt sab kuch aasaan lagta hai, aur ab jab humare beech yeh faasla hai jo mere wajah se hua hai, mujhe sach mein bura lagta hai.
-    </p>
     <button class="look-at-us-button" onclick="goToPhases()">Look At Us</button>
   </div>
 
@@ -157,7 +121,7 @@
   <div class="phase" id="phase1">
     <h2 class="phase-title">REGRET</h2>
     <p>
-      I love spending time with you, Hetal. I love how happy we were during those carefree moments.Not Couples valla pyaar like in general valla. In between these continuous fights, tujhe mere upar trust chal gaya aur irritation aa gayi, I'm sorry for that 🥹. I truly care for you as a friend and respect you deeply. I always wanted to see you happy, and it hurts me to see tears in your eyes. I noticed it yesterday, and I feel really guilty and regretful for it 😢. I never imagined that we would be in this phase, and I feel terrible for the way things have turned out. I’m lucky enough for the bond we share, and I don't have this kind of bond with anyone else. Tere saath bak-bak nahi karta hoon, toh din acha nahi jaata 🥲. I'm not just saying words—I'll make sure my actions reflect this. I'm really sorry, Hetal🫂🥺, and I'll do my best because you deserve that. I promise, believe me.
+      I love spending time with you, Hetal. I love how happy we were during those carefree moments. Not Couples valla pyaar like in general valla. In between these continuous fights, tujhe mere upar trust chal gaya aur irritation aa gayi, I'm sorry for that 🥹. I truly care for you as a friend and respect you deeply. I always wanted to see you happy, and it hurts me to see tears in your eyes. I noticed it yesterday, and I feel really guilty and regretful for it 😢. I never imagined that we would be in this phase, and I feel terrible for the way things have turned out. I’m lucky enough for the bond we share, and I don't have this kind of bond with anyone else. Tere saath bak-bak nahi karta hoon, toh din acha nahi jaata 🥲. I'm not just saying words—I'll make sure my actions reflect this. I'm really sorry, Hetal🫂🥺, and I'll do my best because you deserve that. I promise, believe me.
     </p>
     <button class="next-button" onclick="goToPhase2()">Next</button>
     <button class="back-button" onclick="goBack()">Back to Home</button>
@@ -165,11 +129,9 @@
 
   <!-- Phase 2: Involvement -->
   <div class="phase" id="phase2">
-    <h2 class="phase-title">Nostalgia and Cherish 💖
-</h2>
+    <h2 class="phase-title">Nostalgia and Cherish 💖</h2>
     <p>
-      I really miss those days when you were comfortable and at peace with me. I loved playing with your hair and forehead with my fingers, and you giving me that 😏 expression. Our bak-bak, which we’re missing badly, could bring so much joy back if we could revive it. If we could bring those moments back, our bond would be even more beautiful, and we could experience that joy and happiness once again, being comfortable with each other. Those days were 💖
- Can We be like before we used to without fights🥹? I'm Really Missing Those Days😭 🥹🥹🥹🥹. Sab ke liye tum 'Hetal' ho sakti ho, par mere liye… woh naam mein tum ho! 🥰 Agar sab log Hetal karke bulate hain, toh unme aur mujhme kya farq reh jaayega? Tumhe yaad hai, kitni baar tumhe uss naam se bulaya tha, aur uske saath kitni sari hamari bak bak hui hai? 😄 Mujhe bhi apni woh chhoti si duniya wapas chahiye! 💖 Par wada karta hoon, har sentence mein nahi bulaunga, taki tumhe kabhi awkward na lage. 🤗 Sirf kabhi kabhi, jab woh moment aur khaas ban sake! 🌟 Please, waise hi bulane do jaise pehle bulata tha... kya kehti ho? 😊
+      I really miss those days when you were comfortable and at peace with me. I loved playing with your hair and forehead with my fingers, and you giving me that 😏 expression. Our bak-bak, which we’re missing badly, could bring so much joy back if we could revive it. If we could bring those moments back, our bond would be even more beautiful, and we could experience that joy and happiness once again, being comfortable with each other. Those days were 💖 Can We be like before we used to without fights🥹? I'm Really Missing Those Days😭 🥹🥹🥹🥹. Sab ke liye tum 'Hetal' ho sakti ho, par mere liye… woh naam mein tum ho! 🥰 Agar sab log Hetal karke bulate hain, toh unme aur mujhme kya farq reh jaayega? Tumhe yaad hai, kitni baar tumhe uss naam se bulaya tha, aur uske saath kitni sari hamari bak bak hui hai? 😄 Mujhe bhi apni woh chhoti si duniya wapas chahiye! 💖 Par wada karta hoon, har sentence mein nahi bulaunga, taki tumhe kabhi awkward na lage. 🤗 Sirf kabhi kabhi, jab woh moment aur khaas ban sake! 🌟 Please, waise hi bulane do jaise pehle bulata tha... kya kehti ho? 😊
     </p>
     <button class="next-button" onclick="goToPhase3()">Next</button>
     <button class="back-button" onclick="goBack()">Back to Home</button>
@@ -179,7 +141,7 @@
   <div class="phase" id="phase3">
     <h2 class="phase-title">Promise</h2>
     <p>
-      Hamara dosti is in tough times yaar. I'm feeling so much heavy from the bottom of my heart. Please, ek last chance de de yaar, mera dil tut jaara. Please, ek last chance de na, figure out karenge na. Tera bina main aisa situation mein imagine bhi nahi kar paa raha hoon 🥹. I'm sorry if this sounds odd, but I'm texting this full of tears in my eyes. Actually, mujhe kisise close hone ke liye bahut time lagta hai, and close hone ke baad bhi vibes match nahi karte toh bahut bura lagta hai. But then everything changed when I met you 😭. Though I may be an introvert at that time, but I had to express that after feeling comfortable with you or I got connected to you, I really don't talk this much of stuff or talk every day for hours. It changed me, I found a new me, and it's happened because of you🫂Toh doston jaise, apni dosti ko dusri taraf le jaana ka moka doge? I will always hold your back and love you like I always have 💖. I will make sure we have those moments we once shared, but with better understanding from both sides, as it always should have been 🥰. Tum jahan bhi jaogi, main hamesha tumhare saath rahunga! Kya tum mere saath dena chahti ho, Hetal? Tumhare emotions ko samajhna bhi zaroori hai. Tumhare saath rahe kar life ka sabse best phase enjoy karenge! 💖
+      Hamara dosti is in tough times yaar. I'm feeling so much heavy from the bottom of my heart. Please, ek last chance de de yaar, mera dil tut jaara. Please, ek last chance de na, figure out karenge na. Tera bina main aisa situation mein imagine bhi nahi kar paa raha hoon 🥹. I'm sorry if this sounds odd, but I'm texting this full of tears in my eyes. Actually, mujhe kisise close hone ke liye bahut time lagta hai, and close hone ke baad bhi vibes match nahi karte toh bahut bura lagta hai. But then everything changed when I met you 😭. Though I may be an introvert at that time, but I had to express that after feeling comfortable with you or I got connected to you, I really don't talk this much of stuff or talk every day for hours. It changed me, I found a new me, and it's happened because of you🫂. Toh doston jaise, apni dosti ko dusri taraf le jaana ka moka doge? I will always hold your back and love you like I always have 💖. I will make sure we have those moments we once shared, but with better understanding from both sides, as it always should have been 🥰. Tum jahan bhi jaogi, main hamesha tumhare saath rahunga! Kya tum mere saath dena chahti ho, Hetal? Tumhare emotions ko samajhna bhi zaroori hai. Tumhare saath rahe kar life ka sabse best phase enjoy karenge! 💖
     </p>
     <button class="next-button" onclick="goToConclusion()">Next</button>
     <button class="back-button" onclick="goBack()">Back to Home</button>
@@ -189,8 +151,7 @@
   <div class="phase" id="conclusionPhase">
     <h2 class="phase-title">Conclusion</h2>
     <p>
-      Teri jaisi dost milna mushkil hai, aur main nahi chahta hoon ki tu mujhe chhod de yaar. Please, tu ek heera jaise ho 💎, samajh gaya main aur tujhe waisa hi care karunga ❤, chahe kuch bhi ho jaye. Main tujhe kabhi bhi dhokha nahi dunga, Hetal, ye mera waada hai 🤞. Na main tujhe hurt karunga, promise 🙏. Actually, aisa apology bolna bahut naya laga mujhe 😅, maybe tujhe bhi. Yaad dila raha hoon ki main UIWD, JS, HTML mein topper hoon 😎. Tere liye phir se ye course revisit karna padta 😂. And again, Hetal, I'm so sorry 😔. Can we be the same as before so that it will help us heal 💖 and bring back the peace and comfort we had before.Meri taraf se ek request hai, ye puchne ke liye sharam aa rahi hai mujhe, lekin maine woh cheez teri case mein chhod diya, woh alag baat hai 😅. Mein puchna chahta hoon ki tu meri birthday pe aajaa na, please. Ye mera first birthday hai tumlog ke saath, naye friends se important ban gayi hai. I know, you can't come, lekin kuch bhi kar lekin mujhe disappoint mat karna. Sorry agar ye puchne mein galti hai toh. Tere message ka wait kar raha hoon, baap itne din block kar diya 😭. Waisa lag raha hai ki mera dil ka ek part se blood flow ruk gaya hai 😭
-
+      Teri jaisi dost milna mushkil hai, aur main nahi chahta hoon ki tu mujhe chhod de yaar. Please, tu ek heera jaise ho 💎, samajh gaya main aur tujhe waisa hi care karunga ❤, chahe kuch bhi ho jaye. Main tujhe kabhi bhi dhokha nahi dunga, Hetal, ye mera waada hai 🤞. Na main tujhe hurt karunga, promise 🙏. Actually, aisa apology bolna bahut naya laga mujhe 😅, maybe tujhe bhi. Yaad dila raha hoon ki main UIWD, JS, HTML mein topper hoon 😎. Tere liye phir se ye course revisit karna padta 😂. And again, Hetal, I'm so sorry 😔. Can we be the same as before so that it will help us heal 💖 and bring back the peace and comfort we had before. Meri taraf se ek request hai, ye puchne ke liye sharam aa rahi hai mujhe, lekin maine woh cheez teri case mein chhod diya, woh alag baat hai 😅. Mein puchna chahta hoon ki tu meri birthday pe aajaa na, please. Ye mera first birthday hai tumlog ke saath, naye friends se important ban gayi hai. I know, you can't come, lekin kuch bhi kar lekin mujhe disappoint mat karna. Sorry agar ye puchne mein galti hai toh. Tere message ka wait kar raha hoon, baap itne din block kar diya 😭. Waisa lag raha hai ki mera dil ka ek part se blood flow ruk gaya hai 😭
     </p>
     <button class="back-button" onclick="goBack()">Back to Home</button>
   </div>
